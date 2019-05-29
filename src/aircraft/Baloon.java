@@ -18,7 +18,7 @@ public class Baloon extends Aircraft implements Flyable {
 		if (newWeather == "SNOW") {
 			coordinates = new Coordinates(coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getHeight() - 15);
 			try {
-				WriteFile data = new WriteFile("simulation.txt", true);
+				WriteFile data = new WriteFile("./simulation.txt", true);
 				data.writeToFile("Baloon#" + this.name + "(" + this.id + "): " + "Well we might all just freeze to death up here");
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
@@ -72,6 +72,8 @@ public class Baloon extends Aircraft implements Flyable {
 		try {
 			WriteFile data = new WriteFile("simulation.txt", true);
 			data.writeToFile("Tower says: Baloon#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
+			System.out.println("Tower says: Baloon#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
+
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
