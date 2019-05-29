@@ -72,7 +72,6 @@ public class Baloon extends Aircraft implements Flyable {
 		try {
 			WriteFile data = new WriteFile("simulation.txt", true);
 			data.writeToFile("Tower says: Baloon#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
-			System.out.println("Tower says: Baloon#" + this.name + "(" + this.id + ")" + " registered to weather tower.");
 
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
