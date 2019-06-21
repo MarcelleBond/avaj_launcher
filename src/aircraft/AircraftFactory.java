@@ -1,6 +1,6 @@
 package aircraft;
 
-public class AircraftFactory {
+public abstract class AircraftFactory {
 
 	public static Flyable newAicraftFactory(String type, String name, int longitude, int latitude, int height) {
 		if (type.toUpperCase().equals("JETPLANE")) {

@@ -13,6 +13,11 @@ public class Simulation {
 	public static void main(String[] args) {
 		WeatherTower weatherTower = new WeatherTower();
 		try {
+			if (args.length == 0)
+			{
+				System.out.println("Please provide a file");
+				System.exit(1);
+			}
 			ReadFile file = new ReadFile(args[0]);
 			String[] info = file.OpenFile();
 			FileFormat.fileCheck(info);

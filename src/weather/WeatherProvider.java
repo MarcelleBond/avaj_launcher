@@ -4,7 +4,7 @@ import aircraft.Coordinates;
 
 public class WeatherProvider {
 	private static WeatherProvider weatherProvider = new WeatherProvider();
-	private String[] weather = new String[]{"SNOW", "RAIN", "SUN", "FOG"};
+	private static String[] weather = new String[]{"SNOW", "RAIN", "SUN", "FOG"};
 
 	private WeatherProvider() {
 	}
