@@ -10,6 +10,14 @@ public class FileFormat {
 		}
 		for (int n = 1; n < file.length; n++) {
 			String[] check = file[n].split(" ");
+			if (check.length != 5) {
+				System.out.println("Error on line " + (n+1) + ": incorrect number of arguments");
+				System.exit(1);
+			}
+			if (check[0].charAt(0) != check[1].charAt(0) || check[1].length() < 2) {
+                System.out.println("Error on line " + (n + 1) + ": invalid aircraft name");
+                System.exit(1);
+            }
 			if (!check[2].matches("-?\\d+?")) {
 				System.out.println("Error on line " + (n+1) + ": longitude value has to be a number");
 				System.exit(1);

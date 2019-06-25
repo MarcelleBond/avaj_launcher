@@ -9,7 +9,7 @@ import java.io.IOException;
 
 
 
-public class Simulation {
+public class Simulator {
 	public static void main(String[] args) {
 		WeatherTower weatherTower = new WeatherTower();
 		try {
