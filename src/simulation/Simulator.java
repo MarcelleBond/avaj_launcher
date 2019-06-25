@@ -32,6 +32,10 @@ public class Simulator {
 							Integer.parseInt(aircraft[3]),
 							Integer.parseInt(aircraft[4])).registerTower(weatherTower);
 				}
+				else{
+					System.out.println("Error on line " + (n+1) + ": invalid aircraft");
+					System.exit(1);
+				}
 			}
 			for (int i = 0; i < simulationTime; i++) {
 				weatherTower.changeWeather();
